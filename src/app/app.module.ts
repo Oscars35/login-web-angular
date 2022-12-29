@@ -8,6 +8,7 @@ import { RegisterScreenComponent } from './register-screen/register-screen.compo
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { NoExistsScreenComponent } from './no-exists-screen/no-exists-screen.component';
 import {FormsModule} from "@angular/forms";
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import {FormsModule} from "@angular/forms";
     HttpClientModule,
   ],
   exports: [AppRoutingModule, LoginScreenComponent, RegisterScreenComponent],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

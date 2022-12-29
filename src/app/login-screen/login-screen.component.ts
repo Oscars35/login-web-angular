@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UsersService } from '../users/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-screen',
@@ -11,7 +12,7 @@ export class LoginScreenComponent {
   email: string;
   password: string;
 
-  constructor(public userService: UsersService) {
+  constructor(public userService: UsersService, public router: Router) {
     this.email = '';
     this.password = '';
   }
@@ -20,7 +21,8 @@ export class LoginScreenComponent {
     console.log(this.password);
     const user = {email: this.email, password: this.password};
     this.userService.login(user).subscribe(data => {
-      console.log(data);
+      this.userService.setToken(data.token);
+      this.router.navigateByUrl('/').then(r => console.log(r));
     });
   }
 }

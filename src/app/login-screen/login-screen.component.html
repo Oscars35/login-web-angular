@@ -1,7 +1,7 @@
 <div class="login-container">
   <form class="login-form" method="post">
-    <input class="email-input" placeholder="Email"  required="required">
-    <input class="pass-input" placeholder="Password" required="required">
+    <input class="email-input" placeholder="Email" [(ngModel)]="email" name="email" required="required">
+    <input class="pass-input" placeholder="Password" [(ngModel)]="password" name="password" required="required">
     <button class="login-button" type="submit" (click)="login()">Log In</button>
   </form>
 </div>

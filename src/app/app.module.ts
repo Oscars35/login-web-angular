@@ -7,6 +7,7 @@ import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { RegisterScreenComponent } from './register-screen/register-screen.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { NoExistsScreenComponent } from './no-exists-screen/no-exists-screen.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NoExistsScreenComponent } from './no-exists-screen/no-exists-screen.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   exports: [AppRoutingModule, LoginScreenComponent, RegisterScreenComponent],
   providers: [],

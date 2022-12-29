@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UsersService} from "../users/users.service";
 
 @Component({
   selector: 'app-register-screen',
@@ -8,18 +9,20 @@ import { Component } from '@angular/core';
 export class RegisterScreenComponent {
   email: string;
   password: string;
-  confirmPassword: string;
+  passwordConfirmation: string;
+  passwordError: boolean;
 
-  constructor() {
-    this.email = "";
-    this.password = "";
-    this.confirmPassword = "";
+  constructor(public userService: UsersService) {
+    this.email = '';
+    this.password = '';
+    this.passwordConfirmation = '';
+    this.passwordError = false;
   }
 
   register() {
-    console.log(this.email);
-    console.log(this.password);
-    console.log(this.confirmPassword);
+    const user = {email: this.email, password: this.password};
+    this.userService.register(user).subscribe(data => {
+      console.log(data);
+    });
   }
-
 }

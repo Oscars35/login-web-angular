@@ -1,8 +1,8 @@
 <div class="register-container">
   <form class="register-form" method="post">
-    <input class="email-input" placeholder="Enter email" required="required">
-    <input class="pass-input" placeholder="Enter pass" required="required">
-    <input class="pass-input" placeholder="Repeat pass" required="required">
+    <input class="email-input" placeholder="Enter email" [(ngModel)]="email" name="email" required="required">
+    <input class="pass-input" placeholder="Enter pass" [(ngModel)]="password" name="password" required="required">
+    <input class="pass-input" placeholder="Repeat pass" [(ngModel)]="passwordConfirmation" name="passwordConfirmation" required="required">
     <button class="register-button" type="submit" (click)="register()">Register</button>
   </form>
 </div>

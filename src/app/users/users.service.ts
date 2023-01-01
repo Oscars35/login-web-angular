@@ -11,15 +11,15 @@ export class UsersService {
   constructor(private http: HttpClient, private cookies: CookieService) {}
 
   login(user: any): Observable<any> {
-    return this.http.post("https://reqres.in/api/login", user);
+    return this.http.post("http://localhost:3000/login", user);
   }
 
   register(user: any): Observable<any> {
-    return this.http.post("https://reqres.in/api/register", user);
+    return this.http.post("http://localhost:3000/register", user);
   }
 
-  setToken(token: string) {
-    this.cookies.set("token", token);
+  setToken(logInToken: string) {
+    this.cookies.set("token", logInToken);
   }
 
   getToken() {

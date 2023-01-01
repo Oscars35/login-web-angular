@@ -21,7 +21,8 @@ export class LoginScreenComponent {
     console.log(this.password);
     const user = {email: this.email, password: this.password};
     this.userService.login(user).subscribe(data => {
-      this.userService.setToken(data.token);
+      console.log(data.dataUser.accessToken);
+      this.userService.setToken(data.dataUser.accessToken);
       this.router.navigateByUrl('/').then(r => console.log(r));
     });
   }

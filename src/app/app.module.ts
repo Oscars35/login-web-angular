@@ -9,6 +9,7 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { NoExistsScreenComponent } from './no-exists-screen/no-exists-screen.component';
 import {FormsModule} from "@angular/forms";
 import { CookieService } from 'ngx-cookie-service';
+import { HomeDesignComponent } from './home-design/home-design.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CookieService } from 'ngx-cookie-service';
     LoginScreenComponent,
     RegisterScreenComponent,
     HomeScreenComponent,
-    NoExistsScreenComponent
+    NoExistsScreenComponent,
+    HomeDesignComponent,
   ],
   imports: [
     BrowserModule,

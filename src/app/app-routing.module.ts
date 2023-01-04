@@ -4,12 +4,14 @@ import {RegisterScreenComponent} from "./register-screen/register-screen.compone
 import {LoginScreenComponent} from "./login-screen/login-screen.component";
 import {HomeScreenComponent} from "./home-screen/home-screen.component";
 import {NoExistsScreenComponent} from "./no-exists-screen/no-exists-screen.component";
+import {HomeDesignComponent} from "./home-design/home-design.component";
 
 const routes: Routes = [
   { path:'' , redirectTo: '/home', pathMatch: 'full' },
   { path: 'register', component: RegisterScreenComponent },
   { path: 'login', component: LoginScreenComponent },
   { path: 'home', component: HomeScreenComponent },
+  { path: 'default', component: HomeDesignComponent},
   { path: '**', component: NoExistsScreenComponent },
 ];
 

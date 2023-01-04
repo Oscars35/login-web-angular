@@ -1,0 +1,39 @@
+app-home-design {
+  background: linear-gradient(#4d68ed, #f1bf95);
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  align-self: flex-end;
+  flex-direction: column;
+}
+
+.mountains-img {
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  content: url("/assets/img/back_image_noback.png");
+}
+.moon-img {
+  position: absolute;
+  bottom: 200px;
+  right: 300px;
+  width: 100px;
+  height: 100px;
+  mix-blend-mode: screen;
+  z-index: 1001;
+  content: url("/assets/img/moon.png");
+}
+
+.sun-img {
+  position: absolute;
+  bottom: 400px;
+  left: 300px;
+  width: 150px;
+  height: 120px;
+  mix-blend-mode: screen;
+  z-index: 1001;
+  content: url("/assets/img/sun.png");
+}
+
+.text-div {
+}

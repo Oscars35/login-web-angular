@@ -24,7 +24,7 @@ exports.createUser = (req, res, next) => {
       accessToken: accessToken,
       expiresIn: expiresIn
     }
-    // response 
+    // response
     res.send({ dataUser });
   });
 }
@@ -57,6 +57,20 @@ exports.loginUser = (req, res, next) => {
         // password wrong
         res.status(409).send({ message: 'Something is wrong' });
       }
+    }
+  });
+}
+
+exports.getUser = (req, res, next) => {
+  const userData = {
+    email: req.body.email
+  }
+  User.findOne({ email: userData.email }, (err, user) => {
+    if (err) return res.status(500).send('Server error!');
+    if(!user) res.send({response: 'No User'});
+    else { res.send({ response: 'User Found',
+                      user: user
+                    });
     }
   });
 }

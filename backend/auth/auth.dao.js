@@ -9,6 +9,9 @@ authSchema.statics = {
   },
   login: function (query, cb) {
     this.find(query, cb);
+  },
+  get: function (query, cb) {
+    this.find(query, cb);
   }
 }
 

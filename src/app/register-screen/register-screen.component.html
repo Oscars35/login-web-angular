@@ -1,8 +1,12 @@
 <div class="register-container">
-  <form class="register-form" method="post">
-    <input class="email-input" placeholder="Enter email" [(ngModel)]="email" name="email" required="required">
+  <form class="register-form" method="post" #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <input class="email-input" placeholder="Enter email" [(ngModel)]="email" name="email" required="required" ngModel email>
+    <div class="email-bad">Email Already Exists</div>
+    <input class="username-input" placeholder="Enter username" [(ngModel)]="username" name="username" required="required" type="text">
     <input class="pass-input" placeholder="Enter pass" [(ngModel)]="password" name="password" required="required">
     <input class="pass-input" placeholder="Repeat pass" [(ngModel)]="passwordConfirmation" name="passwordConfirmation" required="required">
-    <button class="register-button" type="submit" (click)="register()">Register</button>
+    <div class="passwords-not-match" [hidden]="registerForm.value.password == registerForm.value.passwordConfirmation">Confirmation password does not match with password</div>
+    <button class="register-button" type="submit" [disabled]=' (registerForm.value.password == "" || registerForm.value.password != registerForm.value.passwordConfirmation)
+                                                               || !registerForm.valid' >Register</button>
   </form>
 </div>

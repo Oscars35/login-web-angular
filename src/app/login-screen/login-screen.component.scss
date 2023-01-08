@@ -4,6 +4,7 @@
 app-root {
   background-color: transparent;
 }
+
 app-login-screen {
   display: flex;
   justify-content: center;
@@ -11,6 +12,7 @@ app-login-screen {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 app-login-screen::before {
@@ -28,6 +30,18 @@ app-login-screen::before {
   100%{transform: translateY(100%)}
 }
 
+input {
+  width: 250px;
+  height: 50px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: #f8dfc8;
+  border: 0;
+  box-shadow: rgb(246,175,122) -2px 2px 5px, rgb(246,175,122) 2px -2px 5px;
+  &::placeholder {
+    color: #fb7200;
+  }
+}
 
 .login-form {
   display: flex;

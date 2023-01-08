@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import { UsersService } from '../users/users.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-screen',
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './login-screen.component.html',
   styleUrls: ['./login-screen.component.scss']
 })

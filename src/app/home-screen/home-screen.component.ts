@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-home-screen',
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './home-screen.component.html',
   styleUrls: ['./home-screen.component.scss']
 })

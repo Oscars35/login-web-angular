@@ -1,3 +1,6 @@
+@import "../partials/_containers.scss";
+@import "../partials/_buttons.scss";
+
 app-root {
   background-color: transparent;
 }
@@ -24,64 +27,6 @@ app-home-screen::before {
 @keyframes background-animate {
   0% {transform: translateY(-100%)}
   100%{transform: translateY(100%)}
-}
-
-.grid {
-  z-index: -1000;
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-gap: 3px;
-  position: absolute;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  div {
-    background-color: black;
-  }
-}
-
-.options-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: rgb(246,175,122) -2px 2px 20px, rgb(246,175,122) 2px -2px 20px;
-  width: 750px;
-  height: 750px;
-  background-color: white;
-  z-index: 1;
-  transition: box-shadow .5s ease-in-out;
-}
-
-.options-container:hover {
-  box-shadow: rgb(246,175,122) -15px 15px 10px, rgb(246,175,122) 15px -15px 10px;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-
-  button {
-    width: 100px;
-    height: 30px;
-    color: #fb7200;
-    font-size: 18px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 0;
-    box-shadow: rgb(244,181,127) -2px 2px 5px, rgb(253, 210, 173) 2px -2px 5px;
-    background-color: #fbedde;
-    transition: box-shadow .5s ease-in-out;
-  }
-
-  button:hover {
-    box-shadow: rgb(244,181,127) -2px 2px 5px, rgb(253, 210, 173) 2px -2px 5px, rgb(244,181,127) 0 5px 5px;
-  }
 }
 
 .page-title {

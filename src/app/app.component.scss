@@ -19,3 +19,17 @@ app-root {
   align-items: center;
   margin: 0;
 }
+
+.grid {
+  z-index: -1000;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-gap: 3px;
+  position: absolute;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  div {
+    background-color: black;
+  }
+}

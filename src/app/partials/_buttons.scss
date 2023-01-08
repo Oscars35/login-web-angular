@@ -1,0 +1,24 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  button {
+    width: 100px;
+    height: 30px;
+    color: #fb7200;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: rgb(244,181,127) -2px 2px 5px, rgb(253, 210, 173) 2px -2px 5px;
+    background-color: #fbedde;
+    transition: box-shadow .5s ease-in-out;
+  }
+
+  button:hover {
+    box-shadow: rgb(244,181,127) -2px 2px 5px, rgb(253, 210, 173) 2px -2px 5px, rgb(244,181,127) 0 5px 5px;
+  }
+}

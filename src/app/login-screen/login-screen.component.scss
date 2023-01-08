@@ -1,6 +1,33 @@
+@import "../partials/_containers.scss";
+@import "../partials/_buttons.scss";
+
 app-root {
-  background-color: red;
+  background-color: transparent;
 }
+app-login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+app-login-screen::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1001;
+  animation: background-animate 4s ease-in-out infinite;
+  background: linear-gradient(#f8dfc8,#fb7200);
+}
+
+@keyframes background-animate {
+  0% {transform: translateY(-100%)}
+  100%{transform: translateY(100%)}
+}
+
 
 .login-form {
   display: flex;

@@ -1,0 +1,18 @@
+.login-container, .options-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: rgb(246,175,122) -2px 2px 20px, rgb(246,175,122) 2px -2px 20px;
+  width: 750px;
+  height: 750px;
+  background-color: white;
+  z-index: 1;
+  transition: box-shadow .5s ease-in-out;
+}
+
+.login-container:hover,  .options-container:hover {
+  box-shadow: rgb(246,175,122) -15px 15px 10px, rgb(246,175,122) 15px -15px 10px;
+}

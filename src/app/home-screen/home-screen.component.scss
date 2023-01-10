@@ -58,3 +58,10 @@ app-home-screen::before {
 .page-title-text {
   color: #fb7200;
 }
+
+@media (width < 848px) {
+  .page-title-text {
+    font-size: 50px !important;
+    margin-bottom: 0;
+  }
+}

@@ -1,7 +1,13 @@
 <div class="login-container">
   <form class="login-form" method="post">
-    <input class="email-input" placeholder="Email" [(ngModel)]="email" name="email" required="required">
-    <input class="pass-input" placeholder="Password" [(ngModel)]="password" name="password" required="required">
+    <div class="email-input-container">
+      <input class="email-input" placeholder="Hola" [(ngModel)]="email" name="email" required="required">
+      <span class="email-text">Email</span>
+    </div>
+    <div class="password-input-container">
+      <input class="pass-input"  placeholder="Hola" [(ngModel)]="password" name="password" required="required">
+      <span class="pass-text">Password</span>
+    </div>
     <div class="buttons">
       <button class="login-button" type="submit" (click)="login()">Log In</button>
     </div>

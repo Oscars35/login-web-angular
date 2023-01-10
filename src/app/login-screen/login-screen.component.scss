@@ -38,9 +38,6 @@ input {
   background-color: #f8dfc8;
   border: 0;
   box-shadow: rgb(246,175,122) -2px 2px 5px, rgb(246,175,122) 2px -2px 5px;
-  &::placeholder {
-    color: #fb7200;
-  }
 }
 
 .login-form {
@@ -52,4 +49,44 @@ input {
   input, button {
     margin-top: 5px;
   }
+}
+
+.email-input-container, .password-input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #fb7200;
+
+  input {
+    padding-left: 8px;
+    transition: .5s ease-in-out;
+    color: #fb7200;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .pass-text, &:placeholder-shown ~ .email-text {
+      cursor: text;
+      top: 20px;
+    }
+
+    &:not(:placeholder-shown) ~ .pass-text, &:not(:placeholder-shown) ~ .email-text {
+      cursor: text;
+      top: 4px;
+    }
+  }
+
+  span {
+    position: absolute;
+    padding-left: 8px;
+    transition: 0.5s ease-in-out;
+    white-space: nowrap;
+  }
+}
+
+.email-input:focus, .pass-input:focus {
+  outline: none !important;
+  border: 0 transparent;
+  width: 300px;
 }
